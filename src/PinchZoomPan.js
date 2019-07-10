@@ -315,6 +315,10 @@ export default class PinchZoomPan extends React.Component {
         this.constrainAndApplyTransform(nextTop, nextLeft, nextScale, tolerance, speed);
     }
 
+    reset() {
+        this.applyInitialTransform();
+    }
+
     //compare stored dimensions to actual dimensions; capture actual dimensions if different
     maybeHandleDimensionsChanged() {
         if (this.isImageReady) {
